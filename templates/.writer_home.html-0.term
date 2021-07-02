@@ -1,0 +1,40 @@
+(base) ]0;~/nlp_writer_scaffold-main/templates[01;34m~/nlp_writer_scaffold-main/templates[00m$ cd ../
+(base) ]0;~/nlp_writer_scaffold-main[01;34m~/nlp_writer_scaffold-main[00m$ python flask.py
+python: can't open file 'flask.py': [Errno 2] No such file or directory
+(base) ]0;~/nlp_writer_scaffold-main[01;34m~/nlp_writer_scaffold-main[00m$ ls
+README.md    flask_app.py       [0m[01;34mimages[0m          st_app.py  [01;34mtemplates[0m
+[01;34m__pycache__[0m  flask_practice.py  simple_site.py  [01;34mstatic[0m     utils.py
+(base) ]0;~/nlp_writer_scaffold-main[01;34m~/nlp_writer_scaffold-main[00m$ python flask_app.py
+Try to open
+
+    https://cocalc1.ai-camp.org/00817c4c-2234-4da4-8978-4e3c95b77bdd/port/12345/
+
+
+ * Serving Flask app "flask_app" (lazy loading)
+ * Environment: production
+[31m   WARNING: This is a development server. Do not use it in a production deployment.[0m
+[2m   Use a production WSGI server instead.[0m
+ * Debug mode: on
+Traceback (most recent call last):
+  File "flask_app.py", line 88, in <module>
+    app.run(host = '0.0.0.0', port=port, debug=True)
+  File "/projects/00817c4c-2234-4da4-8978-4e3c95b77bdd/miniconda3/lib/python3.8/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/projects/00817c4c-2234-4da4-8978-4e3c95b77bdd/miniconda3/lib/python3.8/site-packages/werkzeug/serving.py", line 1030, in run_simple
+    s.bind(server_address)
+OSError: [Errno 98] Address already in use
+(base) ]0;~/nlp_writer_scaffold-main[01;34m~/nlp_writer_scaffold-main[00m$ (base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ python flask.py
+python: can't open file 'flask.py': [Errno 2] No such file or directory
+(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ clear
+[H[J(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ python flask.py
+python: can't open file 'flask.py': [Errno 2] No such file or directory
+(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ [K(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ [K(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ [K(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ 
+(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ clear
+[H[J(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ [K(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ [K(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ [K(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ run
+bash: run: command not found
+(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ pythong[K f lask[K[K[K[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[KM[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[Kpython f laskapp.py
+python: can't open file 'flaskapp.py': [Errno 2] No such file or directory
+(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ python f lask.py
+python: can't open file 'flask.py': [Errno 2] No such file or directory
+(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ 
