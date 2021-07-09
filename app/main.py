@@ -31,35 +31,35 @@ import torch
 from aitextgen import aitextgen
 # load up the model into memory
 # you will need to have all your trained model into the folder trained_mode.
-ai = aitextgen(model_folder="/projects/00817c4c-2234-4da4-8978-4e3c95b77bdd/trained_model_1", to_gpu=False)
+ai = aitextgen(model_folder="trained_model_1", to_gpu=False)
 
 
 
 # setup the webservver
-port = 12345
-base_url = get_base_url(port)
+#port = 12345
+#base_url = get_base_url(port)
 # if dev locally
 # base_url = '/00817c4c-2234-4da4-8978-4e3c95b77bdd/port/12345/'
-app = Flask(__name__, static_url_path=base_url+'static')
+app = Flask(__name__)
 
 
-@app.route(base_url)
+@app.route('/')
 def home():
     return render_template('writer_home.html', generated=None)
 
-@app.route(base_url + '/how_it_works')
+@app.route('/how_it_works')
 def how_it_works():
     return render_template('How-It-Works.html', generated=None)
 
-@app.route(base_url + '/about_us')
+@app.route('/about_us')
 def About_us():
     return render_template('About-Us.html', generated=None)
 
-@app.route(base_url, methods=['POST'])
+@app.route('/', methods=['POST'])
 def home_post():
     return redirect(url_for('results'))
 
-@app.route(base_url + '/results')
+@app.route('/results')
 def results():
     return render_template('Write-your-story-with-AI.html', generated=None)
 
@@ -96,7 +96,7 @@ def remove_toks(s):
 
 import json
 import requests
-@app.route(base_url + '/generate_text', methods=["POST"])
+@app.route('/generate_text', methods=["POST"])
 def generate_text():
     prompt = str(request.form["prompt"]).lower()
     ngrok_url = "http://54e389e7f6e3.ngrok.io"
@@ -109,10 +109,10 @@ def generate_text():
 
 
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     # change the code.ai-camp.org to the site where you are editing this file.
-    print("Try to open\n\n    https://cocalc1.ai-camp.org" + base_url + '\n\n')
+#    print("Try to open\n\n    https://cocalc1.ai-camp.org" + base_url + '\n\n')
     # Try to open: https://cocalc1.ai-camp.org/00817c4c-2234-4da4-8978-4e3c95b77bdd/port/12345/
     # remove debug=True when deploying it
-    app.run(host = '0.0.0.0', port=port, debug=True)
-    import sys; sys.exit(0)
+#    app.run(host = '0.0.0.0', port=port, debug=True)
+#    import sys; sys.exit(0)

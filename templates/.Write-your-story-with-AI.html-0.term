@@ -1,6 +1,0 @@
-(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ pythong [K[K flask_app.py
-python: can't open file 'flask_app.py': [Errno 2] No such file or directory
-(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ python flask.py
-python: can't open file 'flask.py': [Errno 2] No such file or directory
-(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ clear
-[H[J(base) ]0;~/nlp_writer_scaffold-main-1/templates[01;34m~/nlp_writer_scaffold-main-1/templates[00m$ 
