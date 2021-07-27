@@ -31,13 +31,13 @@ import torch
 from aitextgen import aitextgen
 # load up the model into memory
 # you will need to have all your trained model into the folder trained_mode.
-ai = aitextgen(model_folder="trained_model_1", to_gpu=False)
+ai = aitextgen(model_folder="trained_model", to_gpu=False)
 
 
 
 # setup the webservver
-#port = 12345
-#base_url = get_base_url(port)
+port = 12345
+base_url = get_base_url(port)
 # if dev locally
 # base_url = '/00817c4c-2234-4da4-8978-4e3c95b77bdd/port/12345/'
 app = Flask(__name__)
@@ -63,10 +63,10 @@ def home_post():
 def results():
     return render_template('Write-your-story-with-AI.html', generated=None)
 
-'''
+
 @app.route(base_url + '/generate_text', methods=["POST"])
 def generate_text():
-    """view function that will return json response for generated text. 
+    """view function that will return json response for generated text.
     """
 
     prompt = request.form['prompt']
@@ -88,7 +88,7 @@ def generate_text():
     data = {'generated_ls': new_generated}
 
     return jsonify(data)
-'''
+
 def remove_toks(s):
     s = s.split("[start]")[1]
     s = s.split("[end]")[0]
@@ -96,23 +96,23 @@ def remove_toks(s):
 
 import json
 import requests
-@app.route('/generate_text', methods=["POST"])
-def generate_text():
-    prompt = str(request.form["prompt"]).lower()
-    ngrok_url = "http://54e389e7f6e3.ngrok.io"
-    url = ngrok_url + "/generate"
-    x = requests.post(url, data={"prompt":prompt})
-    res = json.loads(x.text)["generated_ls"]
-    r = [remove_toks(resp) for resp in res]
-    return jsonify({'generated_ls':r})
+# @app.route('/generate_text', methods=["POST"])
+# def generate_text():
+#     prompt = str(request.form["prompt"]).lower()
+#     ngrok_url = "http://54e389e7f6e3.ngrok.io"
+#     url = ngrok_url + "/generate"
+#     x = requests.post(url, data={"prompt":prompt})
+#     res = json.loads(x.text)["generated_ls"]
+#     r = [remove_toks(resp) for resp in res]
+#     return jsonify({'generated_ls':r})
 
 
 
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
     # change the code.ai-camp.org to the site where you are editing this file.
-#    print("Try to open\n\n    https://cocalc1.ai-camp.org" + base_url + '\n\n')
+    print("Try to open\n\n    https://cocalc1.ai-camp.org" + base_url + '\n\n')
     # Try to open: https://cocalc1.ai-camp.org/00817c4c-2234-4da4-8978-4e3c95b77bdd/port/12345/
     # remove debug=True when deploying it
-#    app.run(host = '0.0.0.0', port=port, debug=True)
-#    import sys; sys.exit(0)
+    app.run(host = '0.0.0.0', port=port, debug=True)
+    import sys; sys.exit(0)
